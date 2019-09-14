@@ -4,7 +4,12 @@
 fn main() {
     let vec0 = Vec::new();
 
-    let mut vec1 = fill_vec(vec0);
+    // Solution 1
+    //let vec01 = vec0.clone();
+    //let mut vec1 = fill_vec(vec01);
+
+    // Solution 2
+    let mut vec1 = fill_vec(&vec0);
 
     // Do not change the following line!
     println!("{} has length {} content `{:?}`", "vec0", vec0.len(), vec0);
@@ -12,11 +17,10 @@ fn main() {
     vec1.push(88);
 
     println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
-
 }
 
-fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
-    let mut vec = vec;
+fn fill_vec(vec: &Vec<i32>) -> Vec<i32> {
+    let mut vec = vec.clone();
 
     vec.push(22);
     vec.push(44);
@@ -24,19 +28,6 @@ fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
 
     vec
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // So `vec0` is being *moved* into the function `fill_vec` when we call it on
 // line 7, which means it gets dropped at the end of `fill_vec`, which means we

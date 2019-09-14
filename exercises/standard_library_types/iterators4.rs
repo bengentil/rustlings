@@ -1,4 +1,5 @@
 // iterators4.rs
+use std::ops::Range;
 
 pub fn factorial(num: u64) -> u64 {
     // Complete this function to return factorial of num
@@ -10,6 +11,7 @@ pub fn factorial(num: u64) -> u64 {
     // For the most fun don't use:
     // - recursion
     // Scroll down for hints.
+    std::ops::Range{ start: 1, end: num+1 }.into_iter().fold(1, |acc, x| acc * x)
 }
 
 #[cfg(test)]
