@@ -192,7 +192,7 @@ mode = "test"
 
 [[exercises]]
 path = "exercises/error_handling/option1.rs"
-mode = "compile"
+mode = "test"
 
 [[exercises]]
 path = "exercises/error_handling/result1.rs"
@@ -211,7 +211,11 @@ path = "exercises/standard_library_types/arc1.rs"
 mode = "compile"
 
 [[exercises]]
-path = "exercises/standard_library_types/iterator3.rs"
+path = "exercises/standard_library_types/iterators2.rs"
+mode = "test"
+
+[[exercises]]
+path = "exercises/standard_library_types/iterators3.rs"
 mode = "test"
 
 [[exercises]]

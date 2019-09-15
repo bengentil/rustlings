@@ -8,7 +8,8 @@ struct ColorClassicStruct {
 
 struct ColorTupleStruct(String, String);
 
-struct ColorUnitStruct;
+#[derive(Debug)]
+struct UnitStruct;
 
 #[cfg(test)]
 mod tests {
@@ -35,12 +36,9 @@ mod tests {
 
     #[test]
     fn unit_structs() {
-        let green = ColorUnitStruct;
+        let unit_struct = UnitStruct;
+        let message = format!("{:?}s are fun!", unit_struct);
 
-        if let ColorUnitStruct = green {
-            assert!(true);
-        } else {
-            assert!(false);
-        }
+        assert_eq!(message, "UnitStructs are fun!");
     }
 }

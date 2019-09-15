@@ -1,4 +1,4 @@
-// iterator3.rs
+// iterators3.rs
 // This is a bigger exercise than most of the others! You can do it!
 // Here is your mission, should you choose to accept it:
 // 1. Complete the divide function to get the first four tests to pass
@@ -47,7 +47,7 @@ mod tests {
     fn test_not_divisible() {
         assert_eq!(
             divide(81, 6),
-            Err(DivisionError::NotDivisible(NotDivisibleError{
+            Err(DivisionError::NotDivisible(NotDivisibleError {
                 dividend: 81,
                 divisor: 6
             }))
